@@ -99,7 +99,7 @@ function App() {
         setStatusText('Fetching h1b_cleaned_filtered.csv...');
         setProgress(20);
 
-        const response = await fetch('/h1b_cleaned_filtered.csv');
+        const response = await fetch(`${import.meta.env.BASE_URL}h1b_cleaned_filtered.csv`);
         if (!response.ok) {
           throw new Error('Local CSV file not found on dev server context');
         }
