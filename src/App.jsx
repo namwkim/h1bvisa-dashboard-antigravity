@@ -51,7 +51,7 @@ function App() {
     Papa.parse(fileOrBlob, {
       header: true,
       dynamicTyping: true,
-      worker: true,
+      worker: false,
       skipEmptyLines: true,
       complete: (results) => {
         if (results.data && results.data.length > 0) {
